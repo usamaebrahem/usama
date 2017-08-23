@@ -1,0 +1,29 @@
+
+<div >
+  
+   name
+  <input type="text" #name>
+  number:
+  <input type="number" #count>
+  price:
+  <input type="number" #price >
+  
+  <button (click)="addNewTask(name.value,count.value,price.value)">Add </button> 
+ 
+  
+</div>
+<table algin=center>
+  <div *ngFor="let t of tasks">
+    <h2 align=center> name count price X</h2>
+    <tr>
+  <td  align=center>{{t.n}} </td><td>{{t.c}} </td> <td> {{t.p*t.c}} </td> <td> <button  (click)="removeTask(t)" font="Courier"> X </button></td></tr>
+
+
+  </div>
+</table>
+<div>
+  <button  (click)="calculate(tasks)" align="center">Submit</button>
+<h2 align=center>{{i}}</h2>
+</div>
+ 
+
